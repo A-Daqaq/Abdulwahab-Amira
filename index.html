@@ -1,0 +1,1246 @@
+<!doctype html>
+<html lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="بكل فرح ندعوكم لحضور حفل زفاف عبد الوهاب وأميرة يوم السبت 21 تشرين الثاني 2026">
+<meta property="og:type" content="website">
+<meta property="og:title" content="دعوة زفاف عبد الوهاب وأميرة">
+<meta property="og:description" content="بكل فرح ندعوكم لحضور حفل الزفاف يوم السبت 21 تشرين الثاني 2026">
+<style>
+  :root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+  body { margin: 0; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+</style>
+<title>دعوة زفاف عبد الوهاب وأميرة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&display=swap">
+<noscript><style>#cover { display: none; } main { visibility: visible !important; }</style></noscript>
+<style>
+  /* A sealed envelope on white: green wax seal, gold star lattice, an arched card inside.
+     Deliberately single-theme, like printed stationery. */
+  :root {
+    --ground: #ffffff;
+    --ground-deep: #fbf8f1;
+    --ink: #12332e;
+    --ink-soft: #4f6660;
+    --gold: #8f6b24;
+    --gold-bright: #b8924a;
+    --gold-pale: #e4d3ad;
+    --hairline: rgba(143, 107, 36, .32);
+    --paper: #f7f0e1;
+    --paper-fold: #f1e6d1;
+    --paper-shade: #e9dcc2;
+    --seal: #1c4d44;
+    --seal-deep: #0e2a26;
+    --error: #9a2f2a;
+    --petal: #e9b9b1;
+    --petal-pale: #f5dcd6;
+    --shadow: rgba(92, 70, 28, .16);
+
+    --names: "Aref Ruqaa", "Geeza Pro", "Times New Roman", serif;
+    --text: "Amiri", "Geeza Pro", "Times New Roman", serif;
+
+    color-scheme: light;
+  }
+
+  html, body { height: 100%; }
+  body {
+    background: radial-gradient(ellipse at 50% 45%, var(--ground) 40%, var(--ground-deep) 100%), var(--ground-deep);
+    color: var(--ink);
+    font-family: var(--text);
+  }
+  body.sealed { overflow: hidden; }
+
+  #lattice, #petals {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  #lattice {
+    z-index: 0;
+    -webkit-mask-image: radial-gradient(ellipse 66% 68% at 50% 50%, transparent 62%, #000 100%);
+    mask-image: radial-gradient(ellipse 66% 68% at 50% 50%, transparent 62%, #000 100%);
+  }
+  #petals { z-index: 3; }
+
+  .gilded {
+    background: linear-gradient(100deg, var(--gold) 0%, var(--gold-bright) 50%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* The envelope */
+  #cover {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    overflow: auto;
+    display: grid;
+    place-items: center;
+    padding-block: 24px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    box-sizing: border-box;
+    transition: opacity .7s ease;
+  }
+  #cover.leaving { opacity: 0; pointer-events: none; }
+  #cover:not([hidden]):not(.leaving) ~ main { visibility: hidden; }
+
+  .cover-inner {
+    width: 100%;
+    max-width: 30rem;
+    min-width: 0;
+    display: grid;
+    justify-items: center;
+    gap: clamp(28px, 6vh, 48px);
+    text-align: center;
+  }
+
+  .cover-head { display: grid; gap: 6px; transition: opacity .4s ease; }
+  .opening .cover-head, .opening .open-hint { opacity: 0; }
+  .cover-head p { margin: 0; }
+  .cover-bismillah { font-size: 1.25rem; line-height: 1.8; color: var(--gold); }
+  .cover-title { font-family: var(--names); font-size: clamp(2.25rem, 10vw, 3rem); line-height: 1.4; }
+  .cover-line { font-size: 1.1875rem; line-height: 1.6; color: var(--ink-soft); }
+
+  #open {
+    width: 100%;
+    display: grid;
+    gap: 24px;
+    justify-items: center;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+  #open:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; }
+
+  .envelope {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 7 / 5;
+    max-width: 100%;
+    perspective: 1400px;
+    animation: drift 5s ease-in-out infinite;
+  }
+  .opening .envelope { animation: none; }
+  @keyframes drift { 50% { transform: translateY(-6px); } }
+  .envelope > span { position: absolute; display: block; }
+  .envelope svg { display: block; width: 100%; height: 100%; }
+  .defs { position: absolute; width: 0; height: 0; }
+
+  .env-back {
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 22px 44px var(--shadow), 0 4px 10px var(--shadow);
+  }
+  .env-card {
+    z-index: 2;
+    inset: 5% 6% 6%;
+    display: grid !important;
+    align-content: start;
+    justify-items: center;
+    padding-top: 7%;
+    background: var(--ground);
+    box-shadow: inset 0 0 0 5px var(--ground), inset 0 0 0 6px var(--hairline);
+    transition: transform .9s cubic-bezier(.2, .7, .2, 1) .85s;
+  }
+  .env-card b { font-family: var(--names); font-weight: 400; font-size: clamp(1.25rem, 6vw, 1.75rem); line-height: 1.4; }
+  .env-card i { font-style: normal; font-size: 1rem; color: var(--gold); }
+  .opening .env-card { transform: translateY(-58%); }
+
+  .env-pocket { inset: 0; z-index: 3; overflow: hidden; border-radius: 10px; }
+  .env-pocket .fold { filter: drop-shadow(0 -3px 5px rgba(92, 70, 28, .16)); }
+
+  .env-flap {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 58%;
+    z-index: 4;
+    transform-style: preserve-3d;
+    transform-origin: 50% 0;
+    transition: transform .75s ease-in-out .25s, z-index 0s linear .62s;
+  }
+  .opening .env-flap { transform: rotateX(180deg); z-index: 1; }
+  .flap-face {
+    position: absolute;
+    inset: 0;
+    display: block;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    filter: drop-shadow(0 4px 6px rgba(92, 70, 28, .22));
+  }
+  .flap-inner { transform: rotateX(180deg); }
+
+  .env-seal {
+    z-index: 5;
+    top: 58%;
+    left: 50%;
+    width: 30%;
+    aspect-ratio: 1;
+    max-width: 100%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 6px 8px rgba(9, 30, 27, .4));
+    transition: transform .35s ease-in, opacity .3s ease-in;
+  }
+  .env-seal::before {
+    content: "";
+    position: absolute;
+    inset: -8%;
+    border: 1px solid var(--gold-bright);
+    border-radius: 50%;
+    animation: halo 2.6s ease-out infinite;
+  }
+  @keyframes halo {
+    0% { transform: scale(.82); opacity: .8; }
+    100% { transform: scale(1.22); opacity: 0; }
+  }
+  .opening .env-seal::before { animation: none; opacity: 0; }
+  .envelope .env-seal svg { position: relative; overflow: visible; }
+  .opening .env-seal { transform: translate(-50%, -50%) scale(1.25); opacity: 0; }
+
+  .open-hint {
+    display: inline-block;
+    padding: 10px 28px 12px;
+    border-radius: 999px;
+    background: var(--seal);
+    color: var(--ground);
+    font-size: 1.1875rem;
+    line-height: 1.3;
+    transition: opacity .4s ease, background .2s;
+  }
+  #open:hover .open-hint { background: var(--seal-deep); }
+
+  /* The card */
+  main {
+    position: relative;
+    z-index: 1;
+    min-height: 100%;
+    box-sizing: border-box;
+    padding-block: clamp(24px, 6vh, 64px);
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    display: grid;
+    justify-items: center;
+  }
+
+  .invitation {
+    position: relative;
+    width: 100%;
+    max-width: 36rem;
+    min-width: 0;
+    box-sizing: border-box;
+    padding-block: clamp(64px, 14vw, 88px) clamp(36px, 8vw, 56px);
+    padding-inline: clamp(22px, 7vw, 56px);
+    display: grid;
+    justify-items: center;
+    gap: clamp(32px, 7vw, 44px);
+    text-align: center;
+    background: var(--ground);
+    border: 1px solid var(--hairline);
+    border-radius: 50% 50% 20px 20px / 15rem 15rem 20px 20px;
+    box-shadow: 0 24px 60px var(--shadow);
+  }
+  .invitation::before {
+    content: "";
+    position: absolute;
+    inset: 9px;
+    border: 1px solid var(--hairline);
+    border-radius: 50% 50% 13px 13px / 14.5rem 14.5rem 13px 13px;
+    pointer-events: none;
+  }
+  .invitation > * { position: relative; }
+
+  .ornament { width: min(88%, 16rem); height: auto; display: block; overflow: visible; }
+  .orn-line { stroke: var(--gold-bright); stroke-width: 1; stroke-linecap: round; stroke-dasharray: 100; }
+  .ring { fill: none; stroke: url(#ring-gold); stroke-width: 3.2; }
+  .rings, .sprig, .sparkle { transform-box: fill-box; }
+  .rings { transform-origin: 50% 50%; animation: swing 6s ease-in-out infinite; }
+  .sprig { transform-origin: 0% 50%; animation: sway 4.5s ease-in-out infinite; }
+  .sprig-late { animation-delay: -1.5s; }
+  .sparkle { transform-origin: 50% 50%; animation: twinkle 3s ease-in-out infinite; }
+  .sparkle-small { animation-delay: -1.4s; }
+  @keyframes swing { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+  @keyframes sway { 0%, 100% { transform: rotate(-4deg); } 50% { transform: rotate(5deg); } }
+  @keyframes twinkle {
+    0%, 100% { transform: scale(.72) rotate(0deg); opacity: .55; }
+    50% { transform: scale(1.12) rotate(45deg); opacity: 1; }
+  }
+
+  .ornament.inked .ring-a { animation: meet-a 1.3s cubic-bezier(.2, .8, .3, 1) both; }
+  .ornament.inked .ring-b { animation: meet-b 1.3s cubic-bezier(.2, .8, .3, 1) both; }
+  .ornament.inked .orn-line { animation: thread 1.2s ease-out .5s both; }
+  @keyframes meet-a { from { transform: translateX(-26px); opacity: 0; } }
+  @keyframes meet-b { from { transform: translateX(26px); opacity: 0; } }
+
+  .verse { margin: 0; display: grid; gap: 6px; justify-items: center; max-width: 30rem; }
+  .verse p { margin: 0; font-size: clamp(1.3125rem, 4.8vw, 1.625rem); line-height: 2; text-wrap: balance; }
+  .verse .bismillah { color: var(--gold); }
+  .verse cite { font-size: 1.0625rem; font-style: normal; line-height: 1.6; color: var(--gold); }
+
+  .welcome { margin: 0; font-size: clamp(1.25rem, 4.4vw, 1.5rem); line-height: 1.8; color: var(--ink-soft); text-wrap: balance; }
+
+  /* The two names sit on a diagonal, joined by a gold thread through a star medallion. */
+  .couple { position: relative; width: 100%; max-width: 27rem; }
+  .thread { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .thread path {
+    fill: none;
+    stroke: var(--gold-bright);
+    stroke-width: 1.25;
+    stroke-linecap: round;
+    stroke-dasharray: 100;
+    vector-effect: non-scaling-stroke;
+  }
+  .names { position: relative; margin: 0; display: grid; font-weight: 400; }
+  .partner { display: grid; justify-items: center; }
+  .groom { justify-self: start; }
+  .bride { justify-self: end; }
+  .name {
+    padding-inline: .08em;
+    font-family: var(--names);
+    font-size: clamp(3.25rem, 15vw, 4.75rem);
+    line-height: 1.3;
+    background-image: linear-gradient(100deg, var(--gold) 0%, var(--gold-bright) 25%, var(--gold) 50%, var(--gold-bright) 75%, var(--gold) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 8s linear infinite;
+  }
+  @keyframes shimmer { to { background-position: 200% 0; } }
+  .family { margin-top: -6px; font-size: clamp(1.25rem, 4.6vw, 1.5rem); line-height: 1.4; color: var(--ink-soft); }
+  .amp {
+    position: relative;
+    justify-self: center;
+    width: clamp(4.25rem, 17vw, 5.25rem);
+    aspect-ratio: 1;
+    max-width: 100%;
+    margin-block: -12px;
+    display: grid;
+    place-items: center;
+    font-family: var(--names);
+    font-size: clamp(1.625rem, 6vw, 2rem);
+    line-height: 1;
+    color: var(--gold-pale);
+  }
+  .amp svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .amp b { position: relative; font-weight: 400; }
+  .amp svg g { transform-box: fill-box; transform-origin: 50% 50%; animation: turn 36s linear infinite; }
+  @keyframes turn { to { transform: rotate(360deg); } }
+  .rsvp-done svg { animation: beat 1.8s ease-in-out infinite; }
+  @keyframes beat { 0%, 100% { transform: scale(1); } 40% { transform: scale(1.1); } }
+
+  .inked .name { animation: ink 1.2s ease-out both, shimmer 8s linear infinite; }
+  .inked .groom .name { animation-delay: .25s, 0s; }
+  .inked .bride .name { animation-delay: 1.15s, 0s; }
+  .inked .family { animation: rise .6s ease-out both; }
+  .inked .groom .family { animation-delay: 1s; }
+  .inked .bride .family { animation-delay: 1.9s; }
+  .inked .amp { animation: bloom .7s cubic-bezier(.2, 1.4, .4, 1) .85s both; }
+  .inked .thread path { animation: thread 2s ease-in-out .2s both; }
+  @keyframes ink {
+    from { clip-path: inset(-10% -5% -10% 100%); }
+    to { clip-path: inset(-10% -5% -10% -5%); }
+  }
+  @keyframes rise { from { opacity: 0; transform: translateY(6px); } }
+  @keyframes bloom { from { opacity: 0; transform: scale(.4) rotate(-45deg); } }
+  @keyframes thread { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
+
+  .blessing { margin: 0; font-size: clamp(1.1875rem, 4vw, 1.375rem); line-height: 1.8; text-wrap: balance; }
+
+  .action {
+    display: inline-block;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 10px 24px 12px;
+    border: 1px solid var(--gold);
+    border-radius: 999px;
+    background: none;
+    color: var(--ink);
+    font: inherit;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .2s, color .2s;
+  }
+  .action:hover { background: var(--seal); border-color: var(--seal); color: var(--ground); }
+  .action:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+  .date-block {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(12px, 4vw, 24px);
+  }
+  .date-block span {
+    align-self: stretch;
+    display: grid;
+    place-items: center;
+    padding-block: 8px;
+    border-block: 1px solid var(--hairline);
+    font-size: clamp(1.0625rem, 3.8vw, 1.3125rem);
+    line-height: 1.5;
+  }
+  .date-block strong { font-size: clamp(3.5rem, 15vw, 4.75rem); font-weight: 400; line-height: 1; color: var(--gold); }
+
+  .venue { width: 100%; display: grid; justify-items: center; gap: 8px; }
+  .venue h2 { margin: 0; font-size: clamp(1.1875rem, 4vw, 1.375rem); font-weight: 400; line-height: 1.6; color: var(--ink-soft); }
+  .venue p { margin: 0 0 8px; font-family: var(--names); font-size: clamp(1.75rem, 7vw, 2.25rem); line-height: 1.4; }
+
+  .timer { width: 100%; display: grid; gap: 16px; }
+  .timer h2 { margin: 0; font-size: clamp(1.1875rem, 4vw, 1.375rem); font-weight: 400; line-height: 1.6; color: var(--ink-soft); }
+
+  .count { margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(6px, 2vw, 14px); }
+  .count > div { display: grid; gap: 4px; min-width: 0; }
+  .count dt { font-size: clamp(1rem, 3.4vw, 1.125rem); line-height: 1.5; color: var(--gold); }
+  .count dd { position: relative; margin: 0; order: -1; aspect-ratio: 1; max-width: 100%; display: grid; place-items: center; }
+  .count svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+  .count circle { fill: none; stroke-width: 3; }
+  .count .track { stroke: var(--gold-pale); }
+  .count .meter { stroke: var(--gold); stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: 100; transition: stroke-dashoffset .5s ease; }
+  .count b { font-size: clamp(1.375rem, 5.6vw, 2rem); font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+
+  .arrived { margin: 0; font-family: var(--names); font-size: clamp(2.25rem, 9vw, 3.25rem); line-height: 1.35; color: var(--gold); text-wrap: balance; }
+
+  .notes {
+    width: 100%;
+    display: grid;
+    gap: 18px;
+    padding-top: clamp(28px, 6vw, 36px);
+    border-top: 1px solid var(--hairline);
+  }
+  .notes h2 { margin: 0; font-family: var(--names); font-size: clamp(1.625rem, 6vw, 2rem); font-weight: 400; line-height: 1.5; }
+  .notes dl { margin: 0; display: grid; gap: 18px; text-align: start; }
+  .notes dl > div {
+    display: grid;
+    grid-template-columns: 3.25rem minmax(0, 1fr);
+    column-gap: 14px;
+    align-items: center;
+  }
+  .notes dt { grid-column: 2; font-size: clamp(1.1875rem, 4vw, 1.3125rem); font-weight: 700; line-height: 1.5; color: var(--gold); }
+  .notes dd { grid-column: 2; margin: 0; font-size: clamp(1.125rem, 3.8vw, 1.25rem); line-height: 1.6; color: var(--ink-soft); }
+  .note-icon {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 3.25rem;
+    height: 3.25rem;
+    box-sizing: border-box;
+    padding: .75rem;
+    border: 1px solid var(--gold-bright);
+    border-radius: 50%;
+    background: var(--ground-deep);
+    fill: none;
+    stroke: var(--gold);
+    stroke-width: 1.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .rsvp-done { display: grid; justify-items: center; gap: 10px; padding-block: 8px; text-align: center; }
+  .rsvp-done:focus { outline: none; }
+  .rsvp-done svg { width: 3.5rem; height: 3.5rem; fill: var(--seal); }
+  .rsvp-done h3 { margin: 0; font-family: var(--names); font-size: clamp(2rem, 8vw, 2.5rem); font-weight: 400; line-height: 1.4; color: var(--gold); }
+  .rsvp-done p { margin: 0; font-size: 1.1875rem; line-height: 1.7; text-wrap: balance; }
+  .rsvp-done .reminder { font-size: 1.0625rem; color: var(--ink-soft); }
+  .rsvp-done .action { margin-top: 8px; }
+
+  .rsvp {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    padding-top: clamp(28px, 6vw, 36px);
+    border-top: 1px solid var(--hairline);
+    text-align: start;
+  }
+  .rsvp-head { display: grid; gap: 4px; text-align: center; }
+  .rsvp-head h2 { margin: 0; font-family: var(--names); font-size: clamp(1.625rem, 6vw, 2rem); font-weight: 400; line-height: 1.5; }
+  .rsvp-head p { margin: 0; font-size: 1.125rem; line-height: 1.6; color: var(--ink-soft); text-wrap: balance; }
+
+  .rsvp form { display: grid; gap: 20px; }
+  .rsvp fieldset { min-width: 0; margin: 0; padding: 0; border: 0; display: grid; gap: 8px; }
+  .rsvp legend, .rsvp label.field-label { display: block; padding: 0; font-size: 1.125rem; line-height: 1.5; color: var(--gold); }
+  .field { display: grid; gap: 8px; min-width: 0; }
+
+  .choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 8px; }
+  .choice { position: relative; display: block; min-width: 0; cursor: pointer; }
+  .choice input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+  .choice span {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 12px 8px;
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    text-align: center;
+    transition: background .2s, border-color .2s, color .2s;
+  }
+  .choice input:checked + span { background: var(--seal); border-color: var(--seal); color: var(--ground); }
+  .choice input:focus-visible + span { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+  .rsvp input[type="text"], .rsvp textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid var(--gold-bright);
+    border-radius: 12px;
+    background: var(--ground);
+    color: var(--ink);
+    font: inherit;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    resize: vertical;
+  }
+  .rsvp input[type="text"]::placeholder, .rsvp textarea::placeholder { color: var(--ink-soft); opacity: 1; }
+  .rsvp input[type="text"]:focus-visible, .rsvp textarea:focus-visible { outline: 2px solid var(--gold); outline-offset: 1px; }
+  .rsvp input[aria-invalid="true"] { border-color: var(--error); }
+
+  .rsvp-error { margin: 0; font-size: 1.0625rem; line-height: 1.5; color: var(--error); }
+
+  .send {
+    display: block;
+    padding: 13px 16px 15px;
+    border-radius: 12px;
+    background: var(--seal);
+    color: var(--ground);
+    font-size: 1.1875rem;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+    transition: background .2s;
+  }
+  .send:hover { background: var(--seal-deep); }
+  .send:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+  .rsvp-number { margin: 0; font-size: 1.0625rem; line-height: 1.6; color: var(--ink-soft); text-align: center; }
+  .rsvp-number bdi { color: var(--ink); user-select: all; white-space: nowrap; }
+
+  .closing { margin: 0; font-size: clamp(1.25rem, 4.4vw, 1.5rem); line-height: 1.7; color: var(--gold); }
+
+  @media (prefers-reduced-motion: reduce) {
+    #cover, .env-card, .env-flap, .env-seal, .cover-head, .open-hint, .count .meter { transition: none; }
+    .envelope, .env-seal::before, .name, .rings, .sprig, .sparkle, .amp svg g, .rsvp-done svg { animation: none; }
+    .env-seal::before { opacity: 0; }
+  }
+</style>
+
+<canvas id="lattice" aria-hidden="true"></canvas>
+
+<svg class="defs" aria-hidden="true">
+  <defs>
+    <linearGradient id="paper-side" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" style="stop-color: var(--paper-shade)"></stop>
+      <stop offset=".5" style="stop-color: var(--paper)"></stop>
+      <stop offset="1" style="stop-color: var(--paper-shade)"></stop>
+    </linearGradient>
+    <linearGradient id="paper-front" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" style="stop-color: var(--paper)"></stop>
+      <stop offset="1" style="stop-color: var(--paper-fold)"></stop>
+    </linearGradient>
+    <linearGradient id="paper-flap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" style="stop-color: var(--paper-fold)"></stop>
+      <stop offset="1" style="stop-color: var(--paper)"></stop>
+    </linearGradient>
+    <linearGradient id="lining" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" style="stop-color: var(--seal)"></stop>
+      <stop offset="1" style="stop-color: var(--seal-deep)"></stop>
+    </linearGradient>
+    <linearGradient id="foil" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" style="stop-color: var(--gold)"></stop>
+      <stop offset=".5" style="stop-color: var(--gold-pale)"></stop>
+      <stop offset="1" style="stop-color: var(--gold)"></stop>
+    </linearGradient>
+    <linearGradient id="foil-light" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" style="stop-color: var(--gold-pale)"></stop>
+      <stop offset=".5" style="stop-color: var(--gold-bright)"></stop>
+      <stop offset="1" style="stop-color: var(--gold-pale)"></stop>
+    </linearGradient>
+    <linearGradient id="ring-gold" gradientUnits="userSpaceOnUse" x1="112" y1="30" x2="188" y2="70">
+      <stop offset="0" style="stop-color: var(--gold)"></stop>
+      <stop offset=".35" style="stop-color: var(--gold-pale)"></stop>
+      <stop offset=".6" style="stop-color: var(--gold-bright)"></stop>
+      <stop offset="1" style="stop-color: var(--gold)"></stop>
+    </linearGradient>
+    <linearGradient id="leaf-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" style="stop-color: var(--gold-pale)"></stop>
+      <stop offset="1" style="stop-color: var(--gold-bright)"></stop>
+    </linearGradient>
+    <radialGradient id="wax" gradientUnits="userSpaceOnUse" cx="46" cy="40" r="78">
+      <stop offset="0" style="stop-color: var(--seal)"></stop>
+      <stop offset="1" style="stop-color: var(--seal-deep)"></stop>
+    </radialGradient>
+    <pattern id="stars" width="44" height="44" patternUnits="userSpaceOnUse">
+      <g fill="none" style="stroke: var(--gold-bright)" stroke-width=".8">
+        <rect x="13" y="13" width="18" height="18"></rect>
+        <rect x="13" y="13" width="18" height="18" transform="rotate(45 22 22)"></rect>
+      </g>
+    </pattern>
+    <pattern id="stars-paper" width="44" height="44" patternUnits="userSpaceOnUse">
+      <g fill="none" style="stroke: var(--gold-pale)" stroke-width=".8">
+        <rect x="13" y="13" width="18" height="18"></rect>
+        <rect x="13" y="13" width="18" height="18" transform="rotate(45 22 22)"></rect>
+      </g>
+    </pattern>
+  </defs>
+</svg>
+
+<div id="cover" lang="ar" dir="rtl">
+  <div class="cover-inner">
+    <div class="cover-head">
+      <p class="cover-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+      <p class="cover-title gilded">عبد الوهاب وأميرة</p>
+      <p class="cover-line">وصلتكم دعوة إلى فرحنا</p>
+    </div>
+
+    <button id="open" type="button" aria-label="افتح الدعوة">
+      <span class="envelope" aria-hidden="true">
+        <span class="env-back">
+          <svg viewBox="0 0 700 500" preserveAspectRatio="none">
+            <rect width="700" height="500" fill="url(#lining)"></rect>
+            <rect width="700" height="500" fill="url(#stars)" opacity=".5"></rect>
+          </svg>
+        </span>
+        <span class="env-card"><b class="gilded">عبد الوهاب وأميرة</b><i>21.11.2026</i></span>
+        <span class="env-pocket">
+          <svg viewBox="0 0 700 500" preserveAspectRatio="none">
+            <path d="M0 0 L338 256 Q350 265 362 256 L700 0 V500 H0Z" fill="url(#paper-side)"></path>
+            <g class="fold">
+              <path d="M0 500 L328 250 Q350 233 372 250 L700 500Z" fill="url(#paper-front)"></path>
+              <path d="M0 500 L328 250 Q350 233 372 250 L700 500Z" fill="url(#stars-paper)" opacity=".55"></path>
+              <path d="M14 500 L332 258 Q350 244 368 258 L686 500" fill="none" stroke="url(#foil)" stroke-width="2"></path>
+              <path d="M38 500 L338 272 Q350 262 362 272 L662 500" fill="none" stroke="url(#foil)" stroke-width=".8"></path>
+            </g>
+            <path d="M0 0 L338 256 Q350 265 362 256 L700 0" fill="none" stroke="url(#foil)" stroke-width="1"></path>
+          </svg>
+        </span>
+        <span class="env-flap">
+          <span class="flap-face">
+            <svg viewBox="0 0 700 290" preserveAspectRatio="none">
+              <path d="M10 0 H690 Q704 0 694 7 L374 278 Q350 298 326 278 L6 7 Q-4 0 10 0Z" fill="url(#paper-flap)"></path>
+              <path d="M10 0 H690 Q704 0 694 7 L374 278 Q350 298 326 278 L6 7 Q-4 0 10 0Z" fill="url(#stars-paper)" opacity=".55"></path>
+              <path d="M40 12 H660 L366 262 Q350 275 334 262Z" fill="none" stroke="url(#foil)" stroke-width="2"></path>
+              <path d="M76 22 H624 L360 246 Q350 254 340 246Z" fill="none" stroke="url(#foil)" stroke-width=".8"></path>
+            </svg>
+          </span>
+          <span class="flap-face flap-inner">
+            <svg viewBox="0 0 700 290" preserveAspectRatio="none">
+              <path d="M10 0 H690 Q704 0 694 7 L374 278 Q350 298 326 278 L6 7 Q-4 0 10 0Z" fill="url(#lining)"></path>
+              <path d="M10 0 H690 Q704 0 694 7 L374 278 Q350 298 326 278 L6 7 Q-4 0 10 0Z" fill="url(#stars)" opacity=".5"></path>
+            </svg>
+          </span>
+        </span>
+        <span class="env-seal">
+          <svg viewBox="0 0 120 120">
+            <path d="M60 6 C74 3 84 12 96 16 C108 20 116 34 114 46 C113 56 118 66 113 77 C108 89 104 100 91 105 C80 110 70 116 58 113 C46 111 33 116 23 107 C13 99 4 90 6 76 C7 65 2 54 7 43 C12 31 17 19 30 14 C41 10 48 8 60 6Z" fill="url(#wax)"></path>
+            <circle cx="60" cy="60" r="41" fill="none" stroke="rgba(9, 30, 27, .55)" stroke-width="5"></circle>
+            <circle cx="60" cy="60" r="44" fill="none" stroke="rgba(255, 255, 255, .14)" stroke-width="1.5"></circle>
+            <path d="M28 40 A38 38 0 0 1 58 22" fill="none" stroke="rgba(255, 255, 255, .28)" stroke-width="3" stroke-linecap="round"></path>
+            <circle cx="60" cy="60" r="36" fill="none" stroke="url(#foil-light)" stroke-width="1.4"></circle>
+            <text x="60" y="72" text-anchor="middle" font-size="32" direction="rtl" fill="url(#foil-light)" style="font-family: var(--names)">ع و أ</text>
+          </svg>
+        </span>
+      </span>
+      <span class="open-hint">افتح الدعوة</span>
+    </button>
+  </div>
+</div>
+
+<main id="invitation" tabindex="-1">
+  <article class="invitation" lang="ar" dir="rtl">
+    <svg class="ornament" id="ornament" viewBox="0 0 300 78" aria-hidden="true" fill="none">
+      <defs>
+        <g id="sprig">
+          <path d="M0 0 C8 -9 24 -10 34 -3 C24 3 9 5 0 0Z" fill="url(#leaf-gold)"></path>
+          <path d="M-4 9 C6 2 21 3 30 10 C20 15 6 15 -4 9Z" fill="url(#leaf-gold)"></path>
+          <path d="M6 -9 C13 -18 26 -21 36 -17 C29 -9 16 -5 6 -9Z" fill="url(#leaf-gold)"></path>
+          <path d="M2 0 C12 -3 22 -4 31 -3 M-1 9 C9 7 19 8 27 10 M9 -9 C17 -13 25 -15 33 -16" stroke-width=".6" style="stroke: var(--ground)"></path>
+        </g>
+      </defs>
+      <path class="orn-line" pathLength="100" d="M78 50 H6"></path>
+      <path class="orn-line" pathLength="100" d="M222 50 H294"></path>
+      <g transform="translate(109 50) scale(-.9 .9)"><g class="sprig"><use href="#sprig"></use></g></g>
+      <g transform="translate(191 50) scale(.9)"><g class="sprig sprig-late"><use href="#sprig"></use></g></g>
+      <g class="rings">
+        <circle class="ring ring-a" cx="133" cy="50" r="19"></circle>
+        <circle class="ring ring-b" cx="167" cy="50" r="19"></circle>
+        <path class="ring ring-a" d="M147.100 37.300 A19 19 0 0 1 151.650 46.400"></path>
+      </g>
+      <path class="sparkle" d="M150 4 Q152 15 161 18 Q152 21 150 32 Q148 21 139 18 Q148 15 150 4Z" fill="url(#leaf-gold)"></path>
+      <path class="sparkle sparkle-small" d="M178 16 Q179 21 183 22 Q179 23 178 28 Q177 23 173 22 Q177 21 178 16Z" fill="url(#leaf-gold)"></path>
+    </svg>
+
+    <blockquote class="verse">
+      <p class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+      <p>وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ</p>
+      <cite>سورة الروم، الآية 21</cite>
+    </blockquote>
+
+    <p class="welcome">تتشرف عائلتا آل دقاق وآل علاف بدعوتكم لمشاركتهما فرحة زفاف</p>
+
+    <div class="couple" id="couple">
+      <svg class="thread" viewBox="0 0 300 300" preserveAspectRatio="none" aria-hidden="true">
+        <path pathLength="100" d="M292 112 C226 96 214 150 150 150 C86 150 74 204 8 188"></path>
+      </svg>
+      <h1 class="names">
+        <span class="partner groom"><span class="name gilded">عبد الوهاب</span><span class="family">دقاق</span></span>
+        <span class="amp">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <g style="fill: var(--seal)">
+              <rect x="17" y="17" width="66" height="66" rx="3"></rect>
+              <rect x="17" y="17" width="66" height="66" rx="3" transform="rotate(45 50 50)"></rect>
+            </g>
+            <circle cx="50" cy="50" r="31" fill="none" style="stroke: var(--gold-bright)" stroke-width="1.2"></circle>
+          </svg>
+          <b>و</b>
+        </span>
+        <span class="partner bride"><span class="name gilded">أميرة</span><span class="family">علاف</span></span>
+      </h1>
+    </div>
+
+    <p class="blessing">بارك الله لهما وبارك عليهما وجمع بينهما في خير</p>
+
+    <button class="action" id="scatter" type="button">انثروا الورد على العروسين</button>
+
+    <p class="date-block" aria-label="السبت، 21 تشرين الثاني 2026">
+      <span>السبت</span>
+      <strong>21</strong>
+      <span>تشرين الثاني 2026</span>
+    </p>
+
+    <section class="venue" aria-labelledby="venue-title">
+      <h2 id="venue-title">مكان الحفل</h2>
+      <p>إسنيورت، إسطنبول</p>
+      <a class="action" href="https://www.google.com/maps?q=41.0358435,28.6742133&amp;z=17&amp;hl=en">افتح الموقع على الخرائط</a>
+    </section>
+
+    <section class="timer" id="timer">
+      <h2>باقي على ليلة العمر</h2>
+      <dl class="count" role="timer" aria-label="الوقت المتبقي حتى 21 تشرين الثاني 2026">
+        <div><dt>أيام</dt><dd><svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="47"></circle><circle class="meter" id="days-ring" cx="50" cy="50" r="47" pathLength="100"></circle></svg><b id="days">–</b></dd></div>
+        <div><dt>ساعات</dt><dd><svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="47"></circle><circle class="meter" id="hours-ring" cx="50" cy="50" r="47" pathLength="100"></circle></svg><b id="hours">–</b></dd></div>
+        <div><dt>دقائق</dt><dd><svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="47"></circle><circle class="meter" id="minutes-ring" cx="50" cy="50" r="47" pathLength="100"></circle></svg><b id="minutes">–</b></dd></div>
+        <div><dt>ثوانٍ</dt><dd><svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="47"></circle><circle class="meter" id="seconds-ring" cx="50" cy="50" r="47" pathLength="100"></circle></svg><b id="seconds">–</b></dd></div>
+      </dl>
+    </section>
+    <p class="arrived" id="arrived" hidden></p>
+
+    <a class="action" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=زفاف%20عبد%20الوهاب%20دقاق%20وأميرة%20علاف&amp;dates=20261121/20261122">أضف إلى تقويم Google</a>
+
+    <section class="notes" aria-labelledby="notes-title">
+      <h2 id="notes-title">رجاء محبة</h2>
+      <dl>
+        <div>
+          <svg class="note-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2.5 10 6h4l1-3.5M10 6 8.5 10l1.5 1.5L5.5 21.5h13L14 11.500l1.500-1.500L14 6"></path></svg>
+          <dt>اللباس المحتشم</dt><dd>يسعدنا التزامكم باللباس المحتشم.</dd>
+        </div>
+        <div>
+          <svg class="note-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4Z"></path><circle cx="12" cy="13" r="3.500"></circle><path d="M3 3l18 18"></path></svg>
+          <dt>خصوصية الحفل</dt><dd>نرجو عدم التصوير حفاظًا على خصوصية الحاضرين.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="rsvp" aria-labelledby="rsvp-title">
+      <div class="rsvp-head">
+        <h2 id="rsvp-title">تأكيد الحضور</h2>
+        <p id="rsvp-intro">اختاروا حالة الحضور واكتبوا اسمكم، ثم أرسلوا الرسالة عبر واتساب.</p>
+      </div>
+
+      <form id="rsvp" novalidate>
+        <fieldset>
+          <legend>هل ستتمكنون من الحضور؟</legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="attendance" id="attend-yes" value="سأحضر بإذن الله" checked><span>سأحضر بإذن الله</span></label>
+            <label class="choice"><input type="radio" name="attendance" id="attend-no" value="أعتذر عن الحضور، وأبارك لكما" ><span>أعتذر وأبارك لكما</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label class="field-label" for="guest-name">الاسم أو اسم العائلة</label>
+          <input type="text" id="guest-name" autocomplete="name" placeholder="اكتب اسمك هنا" aria-describedby="rsvp-error">
+          <p class="rsvp-error" id="rsvp-error" role="alert" hidden>اكتب اسمك قبل الإرسال.</p>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="guest-blessing">كلمة مباركة للعروسين (اختياري)</label>
+          <textarea id="guest-blessing" rows="2" placeholder="بارك الله لكما وبارك عليكما"></textarea>
+        </div>
+
+        <a class="send" id="send-rsvp" href="https://wa.me/971554766115" target="_blank" rel="noopener">إرسال التأكيد عبر واتساب</a>
+      </form>
+
+      <div class="rsvp-done" id="rsvp-done" role="status" tabindex="-1" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.500C5.500 15.800 2.500 12.400 2.500 8.800 2.500 6 4.700 4 7.200 4c1.900 0 3.700 1.100 4.800 2.900C13.100 5.100 14.900 4 16.800 4c2.500 0 4.700 2 4.700 4.800 0 3.600-3 7-9.500 11.700Z"></path></svg>
+        <h3 id="done-title"></h3>
+        <p id="done-text"></p>
+        <p class="reminder">إذا لم تُرسل الرسالة بعد، اضغطوا زر الإرسال في واتساب ليصلنا ردكم.</p>
+        <button class="action" id="rsvp-edit" type="button">تعديل الرد</button>
+      </div>
+
+      <p class="rsvp-number">إذا لم يفتح واتساب، أرسلوا تأكيدكم إلى: <bdi dir="ltr">+971 55 476 6115</bdi></p>
+    </section>
+
+    <p class="closing">حضوركم يكمل فرحتنا</p>
+  </article>
+</main>
+
+<canvas id="petals" aria-hidden="true"></canvas>
+
+<script>
+  var motionOff = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* Countdown. Runs to the first moment of 21 November in the viewer's own time zone. */
+  (function () {
+    var weddingDay = new Date(2026, 10, 21);
+    var dayAfter = new Date(2026, 10, 22);
+    var timerBox = document.getElementById("timer");
+    var arrived = document.getElementById("arrived");
+    var units = [
+      { id: "days", span: 30 },
+      { id: "hours", span: 24 },
+      { id: "minutes", span: 60 },
+      { id: "seconds", span: 60 }
+    ].map(function (u) {
+      u.field = document.getElementById(u.id);
+      u.ring = document.getElementById(u.id + "-ring");
+      return u;
+    });
+    var timer;
+
+    function pad(n) { return String(n).padStart(2, "0"); }
+
+    function show(unit, value, text) {
+      unit.field.textContent = text;
+      unit.ring.style.strokeDashoffset = 100 - Math.min(1, value / unit.span) * 100;
+    }
+
+    function tick() {
+      var now = new Date();
+      var left = weddingDay - now;
+      if (left <= 0) {
+        clearInterval(timer);
+        timerBox.hidden = true;
+        arrived.hidden = false;
+        arrived.textContent = now < dayAfter ? "اليوم يوم الفرح" : "تم الزفاف في 21.11.2026";
+        return;
+      }
+      var total = Math.floor(left / 1000);
+      var days = Math.floor(total / 86400);
+      var hours = Math.floor(total / 3600) % 24;
+      var minutes = Math.floor(total / 60) % 60;
+      var seconds = total % 60;
+      show(units[0], days, days);
+      show(units[1], hours, pad(hours));
+      show(units[2], minutes, pad(minutes));
+      show(units[3], seconds, pad(seconds));
+    }
+
+    timer = setInterval(tick, 1000);
+    tick();
+  })();
+
+  /* Star lattice. Each eight-point star draws itself outward from the page centre on load. */
+  (function () {
+    var canvas = document.getElementById("lattice");
+    var ctx = canvas.getContext("2d");
+    var gold = getComputedStyle(document.documentElement).getPropertyValue("--gold").trim();
+    var still = motionOff || document.hidden;
+    var INNER = 0.7654; /* inner radius of an {8/2} star, as a share of its outer radius */
+    var DURATION = 2200;
+    var stars = [];
+    var size = 0;
+    var reach = 1;
+
+    function star(cx, cy, radius, progress, alpha) {
+      var edge = Math.hypot(radius - radius * INNER * Math.cos(Math.PI / 8), radius * INNER * Math.sin(Math.PI / 8));
+      var length = edge * 16;
+      ctx.globalAlpha = alpha;
+      ctx.setLineDash([length * progress, length]);
+      ctx.beginPath();
+      for (var i = 0; i < 16; i++) {
+        var r = i % 2 ? radius * INNER : radius;
+        var a = i * Math.PI / 8;
+        var x = cx + r * Math.cos(a);
+        var y = cy + r * Math.sin(a);
+        if (i) ctx.lineTo(x, y); else ctx.moveTo(x, y);
+      }
+      ctx.closePath();
+      ctx.stroke();
+    }
+
+    function layout() {
+      var box = canvas.getBoundingClientRect();
+      var ratio = window.devicePixelRatio || 1;
+      canvas.width = Math.round(box.width * ratio);
+      canvas.height = Math.round(box.height * ratio);
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+      ctx.strokeStyle = gold;
+      ctx.lineWidth = 1;
+      size = Math.max(84, Math.min(136, box.width / 8));
+      stars = [];
+      var midX = box.width / 2;
+      var midY = box.height / 2;
+      var cols = Math.ceil(box.width / size / 2) + 1;
+      var rows = Math.ceil(box.height / size / 2) + 1;
+      reach = Math.hypot(midX, midY) + size;
+      for (var i = -cols; i <= cols; i++) {
+        for (var j = -rows; j <= rows; j++) {
+          var x = midX + i * size;
+          var y = midY + j * size;
+          stars.push({ x: x, y: y, delay: Math.hypot(x - midX, y - midY) / reach });
+        }
+      }
+      paint(1);
+    }
+
+    function paint(t) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      stars.forEach(function (s) {
+        /* The outer stars start last, so the lattice opens from the centre to the edges. */
+        var p = Math.min(1, Math.max(0, (t - s.delay * 0.55) / 0.45));
+        if (!p) return;
+        star(s.x, s.y, size / 2, p, 0.62);
+        star(s.x, s.y, size * 0.2, p, 0.42);
+      });
+    }
+
+    function animate() {
+      var start = performance.now();
+      function frame(now) {
+        var t = Math.min(1, (now - start) / DURATION);
+        paint(t);
+        if (t < 1) requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    }
+
+    layout();
+    if (!still) animate();
+    window.addEventListener("resize", layout);
+  })();
+
+  /* Falling rose petals, on opening the envelope and on request. */
+  var scatterPetals = (function () {
+    var canvas = document.getElementById("petals");
+    var ctx = canvas.getContext("2d");
+    var styles = getComputedStyle(document.documentElement);
+    var colors = ["--petal", "--petal-pale", "--gold-pale"].map(function (name) {
+      return styles.getPropertyValue(name).trim();
+    });
+    var dust = styles.getPropertyValue("--gold-bright").trim();
+    var petals = [];
+    var motes = [];
+    var running = false;
+    var width = 0;
+    var height = 0;
+
+    function resize() {
+      var ratio = window.devicePixelRatio || 1;
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = Math.round(width * ratio);
+      canvas.height = Math.round(height * ratio);
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+    }
+
+    function petal(p) {
+      ctx.save();
+      ctx.translate(p.x + Math.sin(p.phase) * p.sway, p.y);
+      ctx.rotate(p.angle);
+      ctx.scale(Math.cos(p.phase * 1.4) * 0.55 + 0.55, 1);
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = 0.9;
+      ctx.beginPath();
+      ctx.moveTo(0, -p.size);
+      ctx.bezierCurveTo(p.size, -p.size * 0.6, p.size * 0.8, p.size * 0.7, 0, p.size);
+      ctx.bezierCurveTo(-p.size * 0.8, p.size * 0.7, -p.size, -p.size * 0.6, 0, -p.size);
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function mote(m) {
+      m.y -= m.speed;
+      m.phase += 0.025;
+      if (m.y < -10) {
+        m.y = height + 10;
+        m.x = Math.random() * width;
+      }
+      ctx.globalAlpha = 0.2 + 0.5 * Math.abs(Math.sin(m.phase));
+      ctx.fillStyle = dust;
+      ctx.beginPath();
+      ctx.arc(m.x + Math.sin(m.phase * 0.7) * 10, m.y, m.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    function frame() {
+      ctx.clearRect(0, 0, width, height);
+      motes.forEach(mote);
+      petals = petals.filter(function (p) { return p.y < height + 20; });
+      petals.forEach(function (p) {
+        p.y += p.speed;
+        p.phase += 0.03;
+        p.angle += p.spin;
+        petal(p);
+      });
+      if (petals.length || motes.length) {
+        requestAnimationFrame(frame);
+      } else {
+        running = false;
+        ctx.clearRect(0, 0, width, height);
+      }
+    }
+
+    function run() {
+      if (running) return;
+      running = true;
+      requestAnimationFrame(frame);
+    }
+
+    window.addEventListener("resize", resize);
+    resize();
+
+    function startDust() {
+      if (motionOff || motes.length) return;
+      for (var i = 0; i < 26; i++) {
+        motes.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          size: 0.8 + Math.random() * 1.6,
+          speed: 0.15 + Math.random() * 0.35,
+          phase: Math.random() * Math.PI * 2
+        });
+      }
+      run();
+    }
+
+    function scatter(count) {
+      if (motionOff) return;
+      for (var i = 0; i < count; i++) {
+        petals.push({
+          x: Math.random() * width,
+          y: -20 - Math.random() * height * 0.9,
+          size: 6 + Math.random() * 7,
+          speed: 2.2 + Math.random() * 2.4,
+          sway: 14 + Math.random() * 26,
+          phase: Math.random() * Math.PI * 2,
+          angle: Math.random() * Math.PI * 2,
+          spin: (Math.random() - 0.5) * 0.04,
+          color: colors[i % colors.length]
+        });
+      }
+      run();
+    }
+
+    scatter.startDust = startDust;
+    return scatter;
+  })();
+
+  /* RSVP. The send link always carries the current answers, so WhatsApp opens with them typed in. */
+  (function () {
+    var form = document.getElementById("rsvp");
+    var nameField = document.getElementById("guest-name");
+    var blessingField = document.getElementById("guest-blessing");
+    var sendLink = document.getElementById("send-rsvp");
+    var errorLine = document.getElementById("rsvp-error");
+    var done = document.getElementById("rsvp-done");
+    var intro = document.getElementById("rsvp-intro");
+
+    function message() {
+      var lines = [
+        "السلام عليكم، تأكيد الحضور لزفاف عبد الوهاب وأميرة",
+        "الاسم: " + nameField.value.trim(),
+        "الحضور: " + form.elements.attendance.value
+      ];
+      var blessing = blessingField.value.trim();
+      if (blessing) lines.push("المباركة: " + blessing);
+      return lines.join("\n");
+    }
+
+    function refresh() {
+      sendLink.href = "https://wa.me/971554766115?text=" + encodeURIComponent(message());
+      if (nameField.value.trim()) {
+        errorLine.hidden = true;
+        nameField.removeAttribute("aria-invalid");
+      }
+    }
+
+    form.addEventListener("input", refresh);
+    form.addEventListener("change", refresh);
+    form.addEventListener("submit", function (event) { event.preventDefault(); });
+    sendLink.addEventListener("click", function (event) {
+      if (nameField.value.trim()) {
+        setTimeout(thank, 50);
+        return;
+      }
+      event.preventDefault();
+      errorLine.hidden = false;
+      nameField.setAttribute("aria-invalid", "true");
+      nameField.focus();
+    });
+    document.getElementById("rsvp-edit").addEventListener("click", function () {
+      done.hidden = true;
+      form.hidden = false;
+      intro.hidden = false;
+      nameField.focus();
+    });
+    refresh();
+
+    function thank() {
+      var attending = document.getElementById("attend-yes").checked;
+      document.getElementById("done-title").textContent = attending ? "شكرًا لكم" : "نتفهم ذلك";
+      document.getElementById("done-text").textContent = attending
+        ? "حضوركم يسعدنا، وننتظركم بإذن الله يوم 21 تشرين الثاني."
+        : "شكرًا لمحبتكم ومباركتكم، وتبقون معنا بدعائكم.";
+      form.hidden = true;
+      intro.hidden = true;
+      done.hidden = false;
+      done.focus({ preventScroll: true });
+      if (attending) scatterPetals(50);
+    }
+  })();
+
+  /* Opening sound, made in the browser: the wax cracks, the paper rustles, a soft chime rises. */
+  function playOpeningSound() {
+    var Context = window.AudioContext || window.webkitAudioContext;
+    if (!Context) return;
+    try {
+      var audio = new Context();
+      audio.resume();
+      var start = audio.currentTime + 0.03;
+      var master = audio.createGain();
+      master.gain.value = 0.8;
+      master.connect(audio.destination);
+
+      var noiseData = audio.createBuffer(1, audio.sampleRate, audio.sampleRate);
+      var samples = noiseData.getChannelData(0);
+      for (var i = 0; i < samples.length; i++) samples[i] = Math.random() * 2 - 1;
+
+      function noise(at, length, type, frequency, level) {
+        var source = audio.createBufferSource();
+        var filter = audio.createBiquadFilter();
+        var gain = audio.createGain();
+        source.buffer = noiseData;
+        filter.type = type;
+        filter.frequency.value = frequency;
+        gain.gain.setValueAtTime(0.0001, at);
+        gain.gain.exponentialRampToValueAtTime(level, at + Math.min(0.08, length / 3));
+        gain.gain.exponentialRampToValueAtTime(0.0001, at + length);
+        source.connect(filter).connect(gain).connect(master);
+        source.start(at);
+        source.stop(at + length);
+      }
+
+      function chime(at, frequency) {
+        [[frequency, 0.13], [frequency * 2.01, 0.03]].forEach(function (partial) {
+          var tone = audio.createOscillator();
+          var gain = audio.createGain();
+          tone.type = "sine";
+          tone.frequency.value = partial[0];
+          gain.gain.setValueAtTime(0.0001, at);
+          gain.gain.exponentialRampToValueAtTime(partial[1], at + 0.02);
+          gain.gain.exponentialRampToValueAtTime(0.0001, at + 2.2);
+          tone.connect(gain).connect(master);
+          tone.start(at);
+          tone.stop(at + 2.3);
+        });
+      }
+
+      noise(start, 0.06, "highpass", 1800, 0.3);
+      noise(start + 0.28, 0.25, "bandpass", 2600, 0.07);
+      noise(start + 0.55, 0.3, "bandpass", 2000, 0.09);
+      noise(start + 0.9, 0.5, "bandpass", 3000, 0.05);
+      [587.33, 739.99, 880, 1174.66].forEach(function (frequency, index) {
+        chime(start + 0.95 + index * 0.17, frequency);
+      });
+
+      setTimeout(function () { audio.close(); }, 5000);
+    } catch (error) {
+      /* The envelope still opens if the browser refuses sound. */
+    }
+  }
+
+  /* Petals sound: a few quiet high notes falling, like the petals. */
+  function playPetalSound() {
+    var Context = window.AudioContext || window.webkitAudioContext;
+    if (!Context) return;
+    try {
+      var audio = new Context();
+      audio.resume();
+      var start = audio.currentTime + 0.02;
+      [1567.98, 1318.51, 1174.66, 987.77, 880].forEach(function (frequency, index) {
+        var at = start + index * 0.11;
+        var tone = audio.createOscillator();
+        var gain = audio.createGain();
+        tone.type = "sine";
+        tone.frequency.value = frequency;
+        gain.gain.setValueAtTime(0.0001, at);
+        gain.gain.exponentialRampToValueAtTime(0.05, at + 0.015);
+        gain.gain.exponentialRampToValueAtTime(0.0001, at + 1.3);
+        tone.connect(gain).connect(audio.destination);
+        tone.start(at);
+        tone.stop(at + 1.4);
+      });
+      setTimeout(function () { audio.close(); }, 2500);
+    } catch (error) {
+      /* The petals still fall if the browser refuses sound. */
+    }
+  }
+
+  /* Opening the envelope: the seal lifts, the flap turns back, the card rises, the page appears. */
+  (function () {
+    var cover = document.getElementById("cover");
+    var openButton = document.getElementById("open");
+    var invitation = document.getElementById("invitation");
+    var scatterButton = document.getElementById("scatter");
+    var used = false;
+
+    document.body.classList.add("sealed");
+    scatterButton.hidden = motionOff;
+    scatterButton.addEventListener("click", function () {
+      playPetalSound();
+      scatterPetals(70);
+    });
+
+    function reveal() {
+      cover.classList.add("leaving");
+      document.getElementById("couple").classList.add("inked");
+      document.getElementById("ornament").classList.add("inked");
+      scatterPetals.startDust();
+      document.body.classList.remove("sealed");
+      window.scrollTo(0, 0);
+      invitation.focus({ preventScroll: true });
+      scatterPetals(60);
+    }
+
+    openButton.addEventListener("click", function () {
+      if (used) return;
+      used = true;
+      playOpeningSound();
+      if (motionOff) {
+        cover.hidden = true;
+        document.body.classList.remove("sealed");
+        invitation.focus({ preventScroll: true });
+        return;
+      }
+      cover.classList.add("opening");
+      setTimeout(reveal, 1850);
+      setTimeout(function () { cover.hidden = true; }, 2600);
+    });
+  })();
+</script>
+</body>
+</html>
