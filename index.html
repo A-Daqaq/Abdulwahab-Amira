@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="بكل فرح ندعوكم لحضور حفل زفاف عبد الوهاب وأميرة يوم السبت 21 تشرين الثاني 2026">
+<meta name="description" content="تتشرف عائلتا آل دقاق وآل علاف بدعوتكم لمشاركتهما فرحة الزفاف • السبت 21. 11. 2026 م • إسنيورت، إسطنبول">
 <meta property="og:type" content="website">
-<meta property="og:title" content="دعوة زفاف عبد الوهاب وأميرة">
-<meta property="og:description" content="بكل فرح ندعوكم لحضور حفل الزفاف يوم السبت 21 تشرين الثاني 2026">
+<meta property="og:title" content="💌 دعوة زفاف عبد الوهاب &amp; أميرة — تفضلوا بفتح الظرف">
+<meta property="og:description" content="تتشرف عائلتا آل دقاق وآل علاف بدعوتكم لمشاركتهما فرحة الزفاف • السبت 21. 11. 2026 م • إسنيورت، إسطنبول">
+<meta property="og:locale" content="ar_AR">
 <style>
   :root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
   body { margin: 0; }
@@ -48,7 +49,12 @@
 
   html, body { height: 100%; }
   body {
-    background: radial-gradient(ellipse at 50% 45%, var(--ground) 40%, var(--ground-deep) 100%), var(--ground-deep);
+    background:
+      radial-gradient(55% 38% at 92% 4%, rgba(228, 211, 173, .42), transparent 100%),
+      radial-gradient(55% 38% at 6% 98%, rgba(245, 220, 214, .5), transparent 100%),
+      radial-gradient(ellipse at 50% 45%, var(--ground) 40%, var(--ground-deep) 100%),
+      var(--ground-deep);
+    background-attachment: fixed;
     color: var(--ink);
     font-family: var(--text);
   }
@@ -248,10 +254,12 @@
     justify-items: center;
     gap: clamp(32px, 7vw, 44px);
     text-align: center;
-    background: var(--ground);
-    border: 1px solid var(--hairline);
+    background:
+      linear-gradient(180deg, var(--ground), #fffdf8) padding-box,
+      linear-gradient(135deg, var(--gold-bright), var(--gold-pale) 45%, var(--gold-bright)) border-box;
+    border: 2px solid transparent;
     border-radius: 50% 50% 20px 20px / 15rem 15rem 20px 20px;
-    box-shadow: 0 24px 60px var(--shadow);
+    box-shadow: 0 30px 70px var(--shadow), 0 6px 16px rgba(92, 70, 28, .08);
   }
   .invitation::before {
     content: "";
@@ -418,8 +426,6 @@
     width: 100%;
     display: grid;
     gap: 18px;
-    padding-top: clamp(28px, 6vw, 36px);
-    border-top: 1px solid var(--hairline);
   }
   .notes h2 { margin: 0; font-family: var(--names); font-size: clamp(1.625rem, 6vw, 2rem); font-weight: 400; line-height: 1.5; }
   .notes dl { margin: 0; display: grid; gap: 18px; text-align: start; }
@@ -460,8 +466,6 @@
     width: 100%;
     display: grid;
     gap: 20px;
-    padding-top: clamp(28px, 6vw, 36px);
-    border-top: 1px solid var(--hairline);
     text-align: start;
   }
   .rsvp-head { display: grid; gap: 4px; text-align: center; }
@@ -531,7 +535,40 @@
 
   .closing { margin: 0; font-size: clamp(1.25rem, 4.4vw, 1.5rem); line-height: 1.7; color: var(--gold); }
 
+  /* Gold botanical corners, dividers and finishing touches */
+  #lattice { opacity: .7; }
+  .corner { position: fixed; z-index: 0; width: clamp(150px, 36vw, 310px); height: auto; pointer-events: none; }
+  .corner-top { top: -4px; right: -4px; }
+  .corner-bottom { bottom: -4px; left: -4px; transform: rotate(180deg); }
+  .corner svg { display: block; width: 100%; height: auto; overflow: visible; transform-origin: 100% 0; animation: breeze 7s ease-in-out infinite; }
+  .corner-bottom svg { animation-delay: -3s; }
+  @keyframes breeze { 0%, 100% { transform: rotate(-1.5deg); } 50% { transform: rotate(2deg); } }
+
+  .divider { width: min(82%, 15rem); height: auto; display: block; overflow: visible; }
+  .divider path.rule { stroke: var(--gold-bright); stroke-width: .9; fill: none; stroke-linecap: round; }
+
+  .date-block strong {
+    background: linear-gradient(120deg, var(--gold), var(--gold-bright), var(--gold));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .venue .note-icon { padding: .7rem; margin-bottom: 4px; }
+  .count dd { background: radial-gradient(circle, var(--ground) 55%, var(--ground-deep) 100%); border-radius: 50%; }
+  .count .track { stroke: var(--gold-pale); stroke-width: 2.5; }
+  .count .meter { stroke: url(#foil); stroke-width: 4; }
+  .notes h2, .rsvp-head h2 { color: var(--gold); }
+  .notes dl > div { padding: 12px 14px; border: 1px solid var(--hairline); border-radius: 14px; background: var(--ground-deep); }
+  .notes .note-icon { background: var(--ground); }
+  .send { background: linear-gradient(135deg, var(--seal), var(--seal-deep)); box-shadow: inset 0 0 0 1px var(--gold-bright), 0 8px 18px rgba(14, 42, 38, .22); }
+  .action { transition: background .2s, color .2s, transform .2s; }
+  .action:hover { transform: translateY(-1px); }
+
+  .will-rise { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1); }
+  .will-rise.risen { opacity: 1; transform: none; }
+
   @media (prefers-reduced-motion: reduce) {
+    .corner svg { animation: none; }
     #cover, .env-card, .env-flap, .env-seal, .cover-head, .open-hint, .count .meter { transition: none; }
     .envelope, .env-seal::before, .name, .rings, .sprig, .sparkle, .amp svg g, .rsvp-done svg { animation: none; }
     .env-seal::before { opacity: 0; }
@@ -539,6 +576,8 @@
 </style>
 
 <canvas id="lattice" aria-hidden="true"></canvas>
+<div class="corner corner-top" aria-hidden="true"><svg viewBox="0 0 210 190"><use href="#branch"></use></svg></div>
+<div class="corner corner-bottom" aria-hidden="true"><svg viewBox="0 0 210 190"><use href="#branch"></use></svg></div>
 
 <svg class="defs" aria-hidden="true">
   <defs>
@@ -583,6 +622,34 @@
       <stop offset="0" style="stop-color: var(--seal)"></stop>
       <stop offset="1" style="stop-color: var(--seal-deep)"></stop>
     </radialGradient>
+    <g id="leaf">
+      <path d="M0 0 C10 -12 34 -14 50 -4 C36 8 12 10 0 0Z" fill="url(#leaf-gold)"></path>
+      <path d="M3 0 C16 -4 32 -5 46 -4" fill="none" stroke-width=".7" style="stroke: var(--ground)"></path>
+    </g>
+    <g id="bloom">
+      <g style="fill: var(--petal-pale); stroke: var(--petal)" stroke-width=".8">
+        <ellipse cx="0" cy="-11" rx="8" ry="11"></ellipse>
+        <ellipse cx="0" cy="-11" rx="8" ry="11" transform="rotate(72)"></ellipse>
+        <ellipse cx="0" cy="-11" rx="8" ry="11" transform="rotate(144)"></ellipse>
+        <ellipse cx="0" cy="-11" rx="8" ry="11" transform="rotate(216)"></ellipse>
+        <ellipse cx="0" cy="-11" rx="8" ry="11" transform="rotate(288)"></ellipse>
+      </g>
+      <circle r="5" fill="url(#leaf-gold)"></circle>
+    </g>
+    <g id="branch">
+      <path d="M198 2 C150 30 96 76 44 168" fill="none" stroke-width="1.4" style="stroke: var(--gold-bright)"></path>
+      <use href="#leaf" transform="translate(172 17) rotate(100) scale(.8)"></use>
+      <use href="#leaf" transform="translate(150 31) rotate(168) scale(.95)"></use>
+      <use href="#leaf" transform="translate(130 48) rotate(92)"></use>
+      <use href="#leaf" transform="translate(112 66) rotate(170)"></use>
+      <use href="#leaf" transform="translate(96 86) rotate(88) scale(.95)"></use>
+      <use href="#leaf" transform="translate(80 106) rotate(165) scale(.9)"></use>
+      <use href="#leaf" transform="translate(66 130) rotate(86) scale(.8)"></use>
+      <use href="#leaf" transform="translate(44 168) rotate(122) scale(.7)"></use>
+      <use href="#bloom" transform="translate(146 58) scale(1.15)"></use>
+      <use href="#bloom" transform="translate(92 118) scale(.85)"></use>
+      <use href="#bloom" transform="translate(196 44) scale(.8)"></use>
+    </g>
     <pattern id="stars" width="44" height="44" patternUnits="userSpaceOnUse">
       <g fill="none" style="stroke: var(--gold-bright)" stroke-width=".8">
         <rect x="13" y="13" width="18" height="18"></rect>
@@ -715,6 +782,13 @@
 
     <button class="action" id="scatter" type="button">انثروا الورد على العروسين</button>
 
+    <svg class="divider" viewBox="0 0 220 26" aria-hidden="true">
+      <path class="rule" d="M6 13 H76 M144 13 H214"></path>
+      <use href="#leaf" transform="translate(101 13) rotate(180) scale(.42)"></use>
+      <use href="#leaf" transform="translate(119 13) scale(.42)"></use>
+      <path d="M110 4 Q111 11 118 13 Q111 15 110 22 Q109 15 102 13 Q109 11 110 4Z" fill="url(#leaf-gold)"></path>
+    </svg>
+
     <p class="date-block" aria-label="السبت، 21 تشرين الثاني 2026">
       <span>السبت</span>
       <strong>21</strong>
@@ -722,10 +796,18 @@
     </p>
 
     <section class="venue" aria-labelledby="venue-title">
+      <svg class="note-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.500s7-6.300 7-11.500a7 7 0 1 0-14 0c0 5.200 7 11.500 7 11.500Z"></path><circle cx="12" cy="10" r="2.500"></circle></svg>
       <h2 id="venue-title">مكان الحفل</h2>
       <p>إسنيورت، إسطنبول</p>
       <a class="action" href="https://www.google.com/maps?q=41.0358435,28.6742133&amp;z=17&amp;hl=en">افتح الموقع على الخرائط</a>
     </section>
+
+    <svg class="divider" viewBox="0 0 220 26" aria-hidden="true">
+      <path class="rule" d="M6 13 H76 M144 13 H214"></path>
+      <use href="#leaf" transform="translate(101 13) rotate(180) scale(.42)"></use>
+      <use href="#leaf" transform="translate(119 13) scale(.42)"></use>
+      <path d="M110 4 Q111 11 118 13 Q111 15 110 22 Q109 15 102 13 Q109 11 110 4Z" fill="url(#leaf-gold)"></path>
+    </svg>
 
     <section class="timer" id="timer">
       <h2>باقي على ليلة العمر</h2>
@@ -738,7 +820,14 @@
     </section>
     <p class="arrived" id="arrived" hidden></p>
 
-    <a class="action" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=زفاف%20عبد%20الوهاب%20دقاق%20وأميرة%20علاف&amp;dates=20261121/20261122">أضف إلى تقويم Google</a>
+    <a class="action calendar" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=زفاف%20عبد%20الوهاب%20دقاق%20وأميرة%20علاف&amp;dates=20261121/20261122">أضف إلى تقويم Google</a>
+
+    <svg class="divider" viewBox="0 0 220 26" aria-hidden="true">
+      <path class="rule" d="M6 13 H76 M144 13 H214"></path>
+      <use href="#leaf" transform="translate(101 13) rotate(180) scale(.42)"></use>
+      <use href="#leaf" transform="translate(119 13) scale(.42)"></use>
+      <path d="M110 4 Q111 11 118 13 Q111 15 110 22 Q109 15 102 13 Q109 11 110 4Z" fill="url(#leaf-gold)"></path>
+    </svg>
 
     <section class="notes" aria-labelledby="notes-title">
       <h2 id="notes-title">رجاء محبة</h2>
@@ -753,6 +842,13 @@
         </div>
       </dl>
     </section>
+
+    <svg class="divider" viewBox="0 0 220 26" aria-hidden="true">
+      <path class="rule" d="M6 13 H76 M144 13 H214"></path>
+      <use href="#leaf" transform="translate(101 13) rotate(180) scale(.42)"></use>
+      <use href="#leaf" transform="translate(119 13) scale(.42)"></use>
+      <path d="M110 4 Q111 11 118 13 Q111 15 110 22 Q109 15 102 13 Q109 11 110 4Z" fill="url(#leaf-gold)"></path>
+    </svg>
 
     <section class="rsvp" aria-labelledby="rsvp-title">
       <div class="rsvp-head">
@@ -1215,6 +1311,22 @@
       scatterPetals(70);
     });
 
+    /* Sections rise gently into view as the guest scrolls down the card. */
+    function startRising() {
+      if (!("IntersectionObserver" in window)) return;
+      var watcher = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("risen");
+          watcher.unobserve(entry.target);
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll(".welcome, .blessing, #scatter, .divider, .date-block, .venue, .timer, .calendar, .notes dl > div, .rsvp, .closing").forEach(function (element) {
+        element.classList.add("will-rise");
+        watcher.observe(element);
+      });
+    }
+
     function reveal() {
       cover.classList.add("leaving");
       document.getElementById("couple").classList.add("inked");
@@ -1222,6 +1334,7 @@
       scatterPetals.startDust();
       document.body.classList.remove("sealed");
       window.scrollTo(0, 0);
+      startRising();
       invitation.focus({ preventScroll: true });
       scatterPetals(60);
     }
