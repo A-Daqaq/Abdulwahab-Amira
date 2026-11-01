@@ -593,6 +593,35 @@
   .will-rise { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1); }
   .will-rise.risen { opacity: 1; transform: none; }
 
+  /* Responsive tuning: the arch follows the card width, wide screens get a larger card,
+     very small phones get tighter spacing, and short landscape screens split the cover in two. */
+  .invitation {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: clamp(36rem, 44vw, 44rem);
+    border-radius: 50% 50% 20px 20px / min(15rem, 46vw) min(15rem, 46vw) 20px 20px;
+  }
+  .invitation::before {
+    border-radius: 50% 50% 13px 13px / calc(min(15rem, 46vw) - .5rem) calc(min(15rem, 46vw) - .5rem) 13px 13px;
+  }
+  .ornament { width: min(76%, 16rem); }
+  .name { font-size: clamp(2.5rem, 14vw, 4.75rem); }
+  .venue .hall { font-size: clamp(1.625rem, 9vw, 3rem); }
+  .count b { font-size: clamp(1.125rem, 5.6vw, 2rem); }
+
+  @media (max-width: 340px) {
+    .invitation { padding-inline: 16px; }
+    .venue .hall::before, .venue .hall::after { display: none; }
+    .notes dl > div { grid-template-columns: 2.5rem minmax(0, 1fr); column-gap: 10px; padding: 10px; }
+    .notes .note-icon { width: 2.5rem; height: 2.5rem; padding: .55rem; }
+  }
+
+  @media (orientation: landscape) and (max-height: 520px) {
+    .cover-inner { max-width: 46rem; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; gap: 24px; }
+    #open { gap: 12px; }
+    .envelope { width: min(100%, calc((100vh - 110px) * 1.4)); }
+    .corner { width: 130px; }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .corner svg { animation: none; }
     #cover, .env-card, .env-flap, .env-seal, .cover-head, .open-hint, .count .meter { transition: none; }
